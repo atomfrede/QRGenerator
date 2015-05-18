@@ -1,19 +1,3 @@
-/*
- * Copyright (C) 2015, Mohamed Fathy
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package com.mEmoZz.qrgen;
 
 import android.app.Dialog;
@@ -220,10 +204,7 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
         et20 = (EditText) findViewById(R.id.webSize1);
         et21 = (EditText) findViewById(R.id.webSize2);
 
-        VCard site = new VCard(null)
-                .setWebsite(et19.getText().toString());
-
-        bm = QRCode.from(site)
+        bm = QRCode.from(et19.getText().toString())
                 .withSize(Integer.parseInt(et20.getText().toString()),
                         Integer.parseInt(et21.getText().toString()))
                 .withCharset("UTF-8")
@@ -238,10 +219,7 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
         et8 = (EditText) findViewById(R.id.emailSize1);
         et9 = (EditText) findViewById(R.id.emailSize2);
 
-        VCard email = new VCard(null)
-                .setEmail(et7.getText().toString());
-
-        bm = QRCode.from(email)
+        bm = QRCode.from(et7.getText().toString())
                 .withSize(Integer.parseInt(et8.getText().toString()),
                         Integer.parseInt(et9.getText().toString()))
                 .withCharset("UTF-8")
