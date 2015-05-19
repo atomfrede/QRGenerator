@@ -156,9 +156,9 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
 
                 return new VCardFragment();
 
-//            } else if (position == 5) {
-//
-//                return new AboutFragment();
+            } else if (position == 5) {
+
+                return new AboutFragment();
 
             } else {
 
@@ -337,7 +337,7 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
 
     }
 
-    private static void keepDialog(Dialog dialog) {
+    private void keepDialog(Dialog dialog) {
 
         WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
         lp.copyFrom(dialog.getWindow().getAttributes());
@@ -407,5 +407,4 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
                 Toast.LENGTH_LONG).show();
 
     }
-
 }
